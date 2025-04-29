@@ -9,7 +9,15 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSHomeKitUsageDescription": "This app wants access to HomeKit to control your smart home devices.",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "entitlements": {
+        "com.apple.developer.homekit": true
+      },
+      "bundleIdentifier": "com.entiendonull.expolocalmodulehomekitdemo"
     },
     "android": {
       "adaptiveIcon": {
@@ -36,6 +44,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "1dab524c-4417-4f90-b663-385fddd45b46"
+      }
+    },
+    "owner": "entiendonull"
   }
 }
