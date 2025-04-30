@@ -11,7 +11,7 @@ public class ExpoHomeKitModule: Module {
     // Gets current HomeKit permission status without triggering a system prompt.
     AsyncFunction("getPermissionsAsync") { (promise: Promise) in
       let status = ExpoHomeKitPermissionRequester.getCachedPermissionStatus()
-      promise.resolve(["status": status])
+      promise.resolve(["status": status, "expires": "never", "granted": status == "granted", "canAskAgain": false])
     }
     
     // HomeKit permission from the user.
